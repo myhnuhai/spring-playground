@@ -13,22 +13,56 @@ cd spring-playground
 mvn clean spring-boot:run
 ```
 
+或者，你可以可以直接[下载](https://github.com/yingzhuo/spring-playground/archive/master.zip)源代码。
+
+Profiles
+---------------------------
+* (未指定): 开发机环境
+* dev: 测试环境
+* prod: 生产环境
+
 MVC
 ---------------------------
 * 配置类
     * `playground.ApplicationConfigMvc`
     * `playground.ApplicationConfigWeb`
 * example
-    * `playground.controller.HtmlController`
-    * `playground.controller.JsonCOntroller`
+    * 生成html视图: `playground.controller.HtmlController`
+    * 生成json视图: `playground.controller.JsonCOntroller`
+    * 生成xml视图: (暂无)
+    * upload: (暂无)
 * 视图渲染技术
     * application/json -> jackson2
+    * application/xml -> (待定)
     * text/html -> jmustache
+    
+数据存储 (关系型数据库)
+---------------------------
+* 数据源
+    * mysql
+    * apache-dbcp2
+* ORM
+    * mybatis
+    
+数据存储 (KeyValue数据库)
+---------------------------
+* (暂无)
 
+认证与授权
+---------------------------
+* (暂无)
+
+任务调度
+---------------------------
+* (暂无)
+
+JMS
+---------------------------
+* (暂无)
 
 Q &amp; A
 ---------------------------
-TODO
+(暂无)
 
 许可证
 ---------------------------
