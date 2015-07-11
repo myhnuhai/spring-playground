@@ -40,7 +40,7 @@ MVC
 数据存储 (关系型数据库)
 ---------------------------
 * 数据源
-    * mysql
+    * mysql/hsqldb
     * apache-dbcp2
 * ORM
     * mybatis
