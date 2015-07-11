@@ -1,5 +1,6 @@
 package playground;
 
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -39,9 +40,7 @@ public class Application {
             LOGGER.info("NO ACTIVE PROFILES");
         } else {
             LOGGER.info("ACTIVE PROFILE: ");
-            for (String profile : profiles) {
-                LOGGER.info(profile);
-            }
+            LOGGER.info(StringUtils.join(profiles, ','));
         }
         LOGGER.info("========================================");
     }

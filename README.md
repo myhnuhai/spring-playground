@@ -40,6 +40,13 @@ MVC
 AOP
 ---------------------------
 * example: `playground.aop.ServiceLoggingAdvice`
+
+Caching
+---------------------------
+* 配置类
+    * `playground.ApplicationConfigCaching`
+* example
+    * `playground.service.impl.UserServiceImpl`
     
 数据存储 (关系型数据库)
 ---------------------------
