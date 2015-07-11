@@ -3,7 +3,7 @@
 [![License](http://img.shields.io/badge/License-Apache_2-red.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
 # spring-playgroud
-这是一个基于spring-boot的空白项目，你可以使用`git`克隆到本地，稍作修改，从而达到加快开发效率的目的。
+这是一个基于spring-boot的空白项目，你可以使用`git`克隆到本地，稍作修改，从而达到提高开发效率的目的。
 
 你可以通过以下方式启动这个项目
 
@@ -20,6 +20,7 @@ Profiles
 * (未指定): 开发机环境
 * dev: 测试环境
 * prod: 生产环境
+* mds: 嵌入式数据库
 
 MVC
 ---------------------------
