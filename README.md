@@ -59,7 +59,7 @@ AOP
 
 任务调度
 ---------------------------
-* (暂无)
+* example: `playground.scheduler.HeatbeatScheduler`
 
 JMS
 ---------------------------
