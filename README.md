@@ -37,6 +37,10 @@ MVC
     * application/xml -> (待定)
     * text/html -> jmustache
     
+AOP
+---------------------------
+* example: `playground.aop.ServiceLoggingAdvice`
+    
 数据存储 (关系型数据库)
 ---------------------------
 * 数据源
