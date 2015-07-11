@@ -1,6 +1,7 @@
 package playground.service.impl;
 
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import playground.domain.User;
 import playground.service.UserService;
@@ -15,6 +16,7 @@ public class UserServiceImpl implements UserService {
     private SqlSession sqlSession;
 
     @Override
+    @Cacheable(value = "users")
     public List<User> findAllUsers() {
         return sqlSession.selectList("user.findAll");
     }
