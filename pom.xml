@@ -223,6 +223,13 @@
             <version>1.2.3</version>
         </dependency>
 
+        <!-- activemq -->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-core</artifactId>
+            <version>5.7.0</version>
+        </dependency>
+
         <!-- guava -->
         <dependency>
             <groupId>com.google.guava</groupId>

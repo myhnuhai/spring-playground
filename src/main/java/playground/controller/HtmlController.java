@@ -20,7 +20,6 @@ public class HtmlController {
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     public ModelAndView authors() {
         List<User> users = userService.findAllUsers();
-
         ModelAndView modelAndView = new ModelAndView("users");
         modelAndView.addObject("users", users);
         return modelAndView;

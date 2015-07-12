@@ -4,6 +4,7 @@ import com.samskivert.mustache.Mustache;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
+import org.springframework.util.ClassUtils;
 
 import javax.annotation.PostConstruct;
 import java.io.InputStream;
@@ -34,7 +35,7 @@ public class TextTemplate {
     }
 
     public String render(String templateName, Object datas) {
-        InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(prefix + templateName + suffix);
+        InputStream inputStream = ClassUtils.getDefaultClassLoader().getResourceAsStream(prefix + templateName + suffix);
         Reader reader = null;
         try {
             reader = new InputStreamReader(inputStream, encoding);

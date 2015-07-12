@@ -9,6 +9,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.jms.annotation.EnableJms;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -16,6 +17,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 @SpringBootApplication
+@EnableJms
 @EnableCaching
 @EnableScheduling
 @EnableAspectJAutoProxy
