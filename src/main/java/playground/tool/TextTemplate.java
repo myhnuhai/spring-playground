@@ -1,6 +1,7 @@
 package playground.tool;
 
 import com.samskivert.mustache.Mustache;
+import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
@@ -36,13 +37,17 @@ public class TextTemplate {
 
     public String render(String templateName, Object datas) {
         InputStream inputStream = ClassUtils.getDefaultClassLoader().getResourceAsStream(prefix + templateName + suffix);
-        Reader reader = null;
+        Reader reader;
         try {
             reader = new InputStreamReader(inputStream, encoding);
         } catch (UnsupportedEncodingException e) {
             throw new IllegalStateException(e);
         }
-        return Mustache.compiler().compile(reader).execute(datas);
+
+        String result = Mustache.compiler().compile(reader).execute(datas);
+        IOUtils.closeQuietly(reader);
+        IOUtils.closeQuietly(inputStream);
+        return result;
     }
 
     @Value("${app.txttmp.prefix}")
