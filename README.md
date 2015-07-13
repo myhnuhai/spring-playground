@@ -5,7 +5,7 @@
 # spring-playgroud
 这是一个基于spring-boot的空白项目，你可以使用`git`克隆到本地，稍作修改，从而达到提高开发效率的目的。
 
-你可以通过以下方式启动这个项目
+你可以通过以下方式的任意一种启动这个项目
 
 ```bash
 git clone git@github.com:yingzhuo/spring-playground.git
@@ -13,65 +13,19 @@ cd spring-playground
 mvn clean spring-boot:run
 ```
 
-或者，你可以可以直接[下载](https://github.com/yingzhuo/spring-playground/archive/master.zip)源代码。
+```bash
+git clone git@github.com:yingzhuo/spring-playground.git
+cd spring-playground
+mvn clean package
+java -jar target/spring-boot-1.0.0.jar --spring.profiles.active=dev
+```
+
+或者，你可以可以直接[下载](https://github.com/yingzhuo/spring-playground/archive/master.zip)源代码，之后导入到你喜爱的IDE中。
 
 Profiles
 ---------------------------
-* (未指定): 开发机环境
-* dev: 测试环境
+* dev:  测试环境
 * prod: 生产环境
-* mds: 嵌入式数据库
-
-MVC
----------------------------
-* 配置类
-    * `playground.ApplicationConfigMvc`
-    * `playground.ApplicationConfigWeb`
-* example
-    * 生成html视图: `playground.controller.HtmlController`
-    * 生成json视图: `playground.controller.JsonCOntroller`
-    * 生成xml视图: (暂无)
-    * upload: (暂无)
-* 视图渲染技术
-    * application/json -> jackson2
-    * application/xml -> (待定)
-    * text/html -> jmustache
-    
-AOP
----------------------------
-* example: `playground.aop.ServiceLoggingAdvice`
-
-Caching
----------------------------
-* 配置类
-    * `playground.ApplicationConfigCaching`
-* example
-    * `playground.service.impl.UserServiceImpl`
-    
-数据存储 (关系型数据库)
----------------------------
-* 数据源
-    * mysql / hsqldb
-    * alibaba-druid
-* ORM
-    * mybatis
-    
-数据存储 (KeyValue数据库)
----------------------------
-* (暂无)
-
-认证与授权
----------------------------
-* (暂无)
-
-任务调度
----------------------------
-* example: `playground.scheduler.HeatbeatScheduler`
-
-JMS
----------------------------
-* 配置类: `playground.ApplicationConfigJms`
-* example: `playground.mdb.TestQueueMessageDrivenBean`
 
 Q &amp; A
 ---------------------------
