@@ -7,8 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.core.env.Environment;
 import org.springframework.jms.annotation.EnableJms;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -28,7 +28,7 @@ public class Application {
     private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
     @Resource
-    private ApplicationContext applicationContext;
+    private Environment env;
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(Application.class, args);
@@ -36,7 +36,7 @@ public class Application {
 
     @PostConstruct
     public void init() {
-        String[] profiles = applicationContext.getEnvironment().getActiveProfiles();
+        String[] profiles = env.getActiveProfiles();
         LOGGER.info("========================================");
         if (profiles == null || profiles.length == 0) {
             LOGGER.info("NO ACTIVE PROFILES");
