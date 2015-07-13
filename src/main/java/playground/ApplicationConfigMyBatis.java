@@ -6,6 +6,7 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
@@ -19,6 +20,7 @@ public class ApplicationConfigMyBatis {
     private DataSource dataSource;
 
     @Bean
+    @DependsOn("dataSource")
     public SqlSessionFactoryBean sqlSessionFactory() throws Throwable {
         SqlSessionFactoryBean factory = new SqlSessionFactoryBean();
         factory.setDataSource(dataSource);
@@ -28,6 +30,7 @@ public class ApplicationConfigMyBatis {
     }
 
     @Bean
+    @DependsOn("dataSource")
     public SqlSessionTemplate sqlSessionTemplate() throws Throwable {
         SqlSessionTemplate template =
                 new SqlSessionTemplate(sqlSessionFactory().getObject(), ExecutorType.SIMPLE, new MyBatisExceptionTranslator(dataSource, false));
@@ -35,6 +38,7 @@ public class ApplicationConfigMyBatis {
     }
 
     @Bean
+    @DependsOn("dataSource")
     public DataSourceTransactionManager transactionManager() {
         return new DataSourceTransactionManager(dataSource);
     }

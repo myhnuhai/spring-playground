@@ -51,8 +51,8 @@ Caching
 数据存储 (关系型数据库)
 ---------------------------
 * 数据源
-    * mysql/hsqldb
-    * apache-dbcp2
+    * mysql / hsqldb
+    * alibaba-druid
 * ORM
     * mybatis
     
@@ -70,7 +70,8 @@ Caching
 
 JMS
 ---------------------------
-* (暂无)
+* 配置类: `playground.ApplicationConfigJms`
+* example: `playground.mdb.TestQueueMessageDrivenBean`
 
 Q &amp; A
 ---------------------------
