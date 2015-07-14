@@ -20,7 +20,7 @@ mvn clean package
 java -jar target/spring-boot-1.0.0.jar --spring.profiles.active=dev
 ```
 
-或者，你可以可以直接[下载](https://github.com/yingzhuo/spring-playground/archive/master.zip)源代码，之后导入到你喜爱的IDE中。
+或者，你可以可以直接下载[源代码](https://github.com/yingzhuo/spring-playground/archive/master.zip)，之后导入到你喜爱的IDE中。
 
 Profiles
 ---------------------------
@@ -30,8 +30,36 @@ Profiles
 Q &amp; A
 ---------------------------
 
-#### 这个是开源的吗？
-是的，请看下面的许可证。
+##### 这个是开源的吗？
+是的，请看本文档最后贴出的许可证。
+
+##### 如何使用spring-mvc生成web页面?
+请参考`playground.controller.HtmlController`
+
+##### 如何如使用spring-mvc生成json应答?
+请参考`playground.controller.JsonController`
+
+##### 如何配置数据源?
+请参考`playground.ApplicationConfigDataSource`。<br>
+这里配置了两种数据源，一种是嵌入式数据库HSQLDB，一种使用的是`alibaba-druid`。
+
+##### 这个项目使用了ORM框架吗？
+本项目使用的是mybatis。<br>
+请参考`playground.ApplicationConfigMyBatis`和`playground.service.impl.UserServiceImpl`
+其他ORM框架如 hibernate, spring-data-jpa等本项目没有支持，如果需要请自行添加。
+
+##### 怎么发送邮件?
+对`JavaMailSender`进行了一层简单的封装。请参考`playground.tool.MailService` <br>
+`playground.tool.MailService`的实例可注入到任何你需要的bean中。
+
+##### 我需要JMS服务，我应该怎么做?
+`JmsTemplate`可以注入到你任意一个需要的bean中。你可以直接使用。当然，你可能需要修改配置。
+
+##### 我需要任务调度怎么办？
+请参考`playground.scheduler.HeartbeatSecheduler`
+
+##### Spring AOP有参考例子吗?
+请参考`playground.aop.ServiceLoggingAdvice`
 
 许可证
 ---------------------------
