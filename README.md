@@ -21,6 +21,8 @@ java -jar target/spring-boot-1.0.0.jar --spring.profiles.active=dev
 ```
 
 或者，你可以可以直接下载[源代码](https://github.com/yingzhuo/spring-playground/archive/master.zip)，之后导入到你喜爱的IDE中。
+* eclipse: `mvn eclipse:eclipse`
+* idea: `idea:idea`
 
 Profiles
 ---------------------------
@@ -36,8 +38,18 @@ Q &amp; A
 #### 如何使用spring-mvc生成web页面?
 请参考`playground.controller.HtmlController`
 
+#### 对于web页面，用的是什么模板生成工具?
+用的是[jmustache](https://github.com/samskivert/jmustache)，而没有采用`JSP`技术。<br>
+根据spring[官方的建议](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-jsp-limitations)不采用`JSP`技术。
+
 #### 如何如使用spring-mvc生成json应答?
 请参考`playground.controller.JsonController`
+
+#### 有上传文件的代码例子吗?
+(TODO)
+
+#### 有下载文件的代码例子吗?
+(TODO)
 
 #### 如何配置数据源?
 请参考`playground.ApplicationConfigDataSource`。<br>
@@ -45,7 +57,7 @@ Q &amp; A
 
 #### 这个项目使用了ORM框架吗？
 本项目使用的是mybatis。<br>
-请参考`playground.ApplicationConfigMyBatis`和`playground.service.impl.UserServiceImpl`
+请参考`playground.ApplicationConfigMyBatis`和`playground.service.impl.UserServiceImpl` <br>
 其他ORM框架如 hibernate, spring-data-jpa等本项目没有支持，如果需要请自行添加。
 
 #### 怎么发送邮件?
