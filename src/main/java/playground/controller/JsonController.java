@@ -11,7 +11,7 @@ import java.util.Map;
 @RequestMapping("/json")
 public class JsonController {
     
-    @RequestMapping(value = "authors", method = RequestMethod.GET)
+    @RequestMapping(value = "/authors", method = RequestMethod.GET)
     public Object authos() {
         Map<String, Object> authors = new HashMap<>();
         authors.put("1", "应卓");

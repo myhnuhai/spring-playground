@@ -1,6 +1,7 @@
-[![JDK](http://img.shields.io/badge/JDK-v8.0-yellow.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-[![Build](http://img.shields.io/badge/Build-Maven_2-green.svg)](https://maven.apache.org/)
-[![License](http://img.shields.io/badge/License-Apache_2-red.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+[![JDK](http://img.shields.io/badge/jdk-v8.0-yellow.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+[![build](http://img.shields.io/badge/build-maven_2-green.svg)](https://maven.apache.org/)
+[![build](http://img.shields.io/badge/build-passing-blue.svg)](https://travis-ci.org/yingzhuo/spring-playground)
+[![license](http://img.shields.io/badge/license-apache_2-red.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
 # spring-playgroud
 这是一个基于spring-boot的空白项目，你可以使用`git`克隆到本地，稍作修改，从而达到提高开发效率的目的。
@@ -46,10 +47,10 @@ Q &amp; A
 请参考`playground.controller.JsonController`
 
 #### 有上传文件的代码例子吗?
-(TODO)
+请参考`playground.controller.UploadController`
 
 #### 有下载文件的代码例子吗?
-(TODO)
+请参考`playground.controller.DownloadController`
 
 #### 如何配置数据源?
 请参考`playground.ApplicationConfigDataSource`。<br>
