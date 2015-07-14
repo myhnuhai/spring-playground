@@ -23,7 +23,7 @@ java -jar target/spring-boot-1.0.0.jar --spring.profiles.active=dev
 
 或者，你可以可以直接下载[源代码](https://github.com/yingzhuo/spring-playground/archive/master.zip)，之后导入到你喜爱的IDE中。
 * eclipse: `mvn eclipse:eclipse`
-* idea: `idea:idea`
+* idea: `mvn idea:idea`
 
 Profiles
 ---------------------------
