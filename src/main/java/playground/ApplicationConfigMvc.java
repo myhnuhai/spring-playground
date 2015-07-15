@@ -35,6 +35,7 @@ public class ApplicationConfigMvc extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addRedirectViewController("/", "/info");
+        registry.addViewController("/error").setViewName("error");
     }
 
     @Override
