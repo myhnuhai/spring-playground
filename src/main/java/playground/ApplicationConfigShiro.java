@@ -71,7 +71,9 @@ public class ApplicationConfigShiro {
     @Bean
     @DependsOn("lifecycleBeanPostProcessor")
     public DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator() {
-        return new DefaultAdvisorAutoProxyCreator();
+        DefaultAdvisorAutoProxyCreator proxyCreator = new DefaultAdvisorAutoProxyCreator();
+        proxyCreator.setProxyTargetClass(true);
+        return proxyCreator;
     }
 
     @Bean

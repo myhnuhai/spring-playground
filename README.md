@@ -74,6 +74,10 @@ Q &amp; A
 #### Spring AOP有参考例子吗?
 请参考`playground.aop.ServiceLoggingAdvice`
 
+#### 可以集成认证与授权框架吗?
+本项目集成了`apache-shiro`，请参考`playground.ApplicationConfigShiro`
+
+
 许可证
 ---------------------------
 
