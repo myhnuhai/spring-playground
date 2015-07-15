@@ -40,8 +40,7 @@ Q &amp; A
 请参考`playground.controller.HtmlController`
 
 #### 对于web页面，用的是什么模板生成工具?
-用的是[jmustache](https://github.com/samskivert/jmustache)，而没有采用`JSP`技术。<br>
-根据spring[官方的建议](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-jsp-limitations)不采用`JSP`技术。
+使用的是[jmustache](https://github.com/samskivert/jmustache)，根据spring[官方的建议](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-jsp-limitations)不采用`JSP`技术。
 
 #### 如何如使用spring-mvc生成json应答?
 请参考`playground.controller.JsonController`
@@ -75,7 +74,8 @@ Q &amp; A
 请参考`playground.aop.ServiceLoggingAdvice`
 
 #### 可以集成认证与授权框架吗?
-本项目集成了`apache-shiro`，请参考`playground.ApplicationConfigShiro`
+本项目集成了`apache-shiro`，请参考`playground.ApplicationConfigShiro` <br>
+推荐使用标注管理访问URL。
 
 
 许可证
