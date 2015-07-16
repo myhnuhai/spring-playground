@@ -21,4 +21,8 @@ public class UserServiceImpl implements UserService {
         return sqlSession.selectList("user.findAll");
     }
 
+    @Override
+    public User findUserByName(String name) {
+        return sqlSession.selectOne("user.findByName", name);
+    }
 }

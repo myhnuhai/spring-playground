@@ -9,4 +9,6 @@ public interface UserService {
 
     public List<User> findAllUsers();
 
+    public User findUserByName(String name);
+
 }

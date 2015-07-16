@@ -12,7 +12,6 @@ import org.springframework.core.env.Environment;
 import org.springframework.jms.annotation.EnableJms;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
@@ -40,9 +39,9 @@ public class Application {
         String[] profiles = env.getActiveProfiles();
         LOGGER.info("========================================");
         if (profiles == null || profiles.length == 0) {
-            LOGGER.info("NO ACTIVE PROFILES");
+            LOGGER.info("no active profiles!");
         } else {
-            LOGGER.info("ACTIVE PROFILE: ");
+            LOGGER.info("active profiles: ");
             LOGGER.info(StringUtils.join(profiles, ','));
         }
         LOGGER.info("========================================");

@@ -11,4 +11,15 @@
           T_USER
     </select>
 
+    <select id="findByName" parameterType="string" resultType="User">
+        SELECT
+          ID        AS  id,
+          NAME      AS  name,
+          EMAIL     AS  email
+        FROM
+          T_USER
+        WHERE
+          name      =   #{name}
+    </select>
+
 </mapper>
