@@ -29,6 +29,7 @@ Profiles
 ---------------------------
 * dev:  测试环境
 * prod: 生产环境
+* mongo: 此环境中包含mongodb的配置
 
 Q &amp; A
 ---------------------------
@@ -59,6 +60,10 @@ Q &amp; A
 本项目使用的是mybatis。<br>
 请参考`playground.ApplicationConfigMyBatis`和`playground.service.impl.UserServiceImpl` <br>
 其他ORM框架如 hibernate, spring-data-jpa等本项目没有支持，如果需要请自行添加。
+
+#### 我要使用mongodb我应该怎么做?
+本项目集成了`spring-data-mongodb`，如果你需要使用的话，可以把`org.springframework.data.mongodb.core.MongoTemplate`注入到任何你需要的bean中去。<br>
+事实上，集成了`spring-data-mongodb`以后，用法和JPA有相当大的相似之处。请参考[spring-data-mongodb](http://docs.spring.io/spring-data/data-mongo/docs/1.7.1.RELEASE/reference/html/)的官方文档。<br>
 
 #### 怎么发送邮件?
 对`JavaMailSender`进行了一层简单的封装。请参考`playground.tool.MailService` <br>
