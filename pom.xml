@@ -7,6 +7,7 @@
     <groupId>com.github.yingzhuo</groupId>
     <artifactId>spring-playground</artifactId>
     <version>1.0.0</version>
+    <description>An empty project of spring-boot.</description>
 
     <repositories>
         <repository>
