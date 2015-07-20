@@ -1,21 +1,18 @@
 package playground.util;
 
-import java.util.Iterator;
 import java.util.UUID;
-import java.util.stream.Stream;
+import java.util.function.Supplier;
 
-public final class UUIDs {
+public interface UUIDs {
 
-    private UUIDs() {
-        super();
+    public static Supplier<String> UUID_SUPPLIER = () -> UUID.randomUUID().toString().replaceAll("-", "");
+
+    public static String create(final Supplier<String> supplier) {
+        return supplier.get();
     }
 
-    private static Iterator<String> UUID_ITERATOR = Stream.generate(() -> UUID.randomUUID().toString()).iterator();
-
-    /* -------------------------------------------------------- */
-
     public static String random() {
-        return UUID_ITERATOR.next().replaceAll("-", "").toLowerCase();
+        return create(UUID_SUPPLIER);
     }
 
 }
