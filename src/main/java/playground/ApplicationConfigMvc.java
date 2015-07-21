@@ -13,7 +13,6 @@ import java.util.List;
 @Configuration
 public class ApplicationConfigMvc extends WebMvcConfigurerAdapter {
 
-
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();

@@ -1,6 +1,5 @@
 package playground;
 
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -15,6 +14,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
+import java.util.Arrays;
+import java.util.List;
 
 @SpringBootApplication
 @EnableJms
@@ -36,13 +37,13 @@ public class Application {
 
     @PostConstruct
     public void init() {
-        String[] profiles = env.getActiveProfiles();
+        List<String> profiles = Arrays.asList(env.getActiveProfiles());
         LOGGER.info("========================================");
-        if (profiles == null || profiles.length == 0) {
+        if (profiles.isEmpty()) {
             LOGGER.info("no active profiles!");
         } else {
             LOGGER.info("active profiles: ");
-            LOGGER.info(StringUtils.join(profiles, ','));
+            profiles.forEach(LOGGER::debug);
         }
         LOGGER.info("========================================");
     }
