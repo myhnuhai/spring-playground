@@ -1,6 +1,9 @@
 package playground.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.io.Serializable;
+import java.util.Date;
 
 
 public class User implements Serializable {
@@ -8,11 +11,13 @@ public class User implements Serializable {
     private Integer id;
     private String name;
     private String email;
+    private Date dob;
 
     public User() {
         super();
     }
 
+    @JsonProperty("uuid")
     public Integer getId() {
         return id;
     }
@@ -36,4 +41,14 @@ public class User implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @JsonProperty("dateOfBirth")
+    public Date getDob() {
+        return dob;
+    }
+
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
+
 }

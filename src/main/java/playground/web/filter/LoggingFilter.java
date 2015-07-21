@@ -21,7 +21,8 @@ public class LoggingFilter extends OncePerRequestFilter {
     private Set<String> uriExcludes = new HashSet<>();
 
     public LoggingFilter() {
-        this.uriExcludes.add("/favicon.ico");
+        uriExcludes.add("/");
+        uriExcludes.add("/favicon.ico");
     }
 
     @Override
