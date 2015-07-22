@@ -82,6 +82,10 @@ Q &amp; A
 本项目集成了`apache-shiro`，请参考`playground.ApplicationConfigShiro` <br>
 推荐使用标注管理访问URL。
 
+#### 我可以使用其他JVM语言编程吗?
+本项目集成了`groovy`，实际上确实本项目中确实有一个类是用`groovy语言编写的`: `playground.controller.GroovyController` <br>
+其他语言诸如`scala` `jruby`等暂时不支持。
+
 
 许可证
 ---------------------------
