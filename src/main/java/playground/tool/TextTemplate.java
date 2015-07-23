@@ -23,7 +23,6 @@ public class TextTemplate {
     @PostConstruct
     private void init() {
         Assert.hasText(prefix);
-        Assert.hasText(suffix);
         Assert.hasText(encoding);
 
         if (prefix.startsWith("/")) {
