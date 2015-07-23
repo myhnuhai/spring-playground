@@ -30,6 +30,7 @@ Profiles
 * dev:  测试环境
 * prod: 生产环境
 * mongo: 此环境中包含mongodb的配置
+* ssl: 使用`HTTPS`协议
 
 Q &amp; A
 ---------------------------
@@ -62,8 +63,8 @@ Q &amp; A
 其他ORM框架如 hibernate, spring-data-jpa等本项目没有支持，如果需要请自行添加。
 
 #### 我要使用mongodb我应该怎么做?
-本项目集成了`spring-data-mongodb`，如果你需要使用的话，可以把`org.springframework.data.mongodb.core.MongoTemplate`注入到任何你需要的bean中去。<br>
-事实上，集成了`spring-data-mongodb`以后，用法和JPA有相当大的相似之处。请参考[spring-data-mongodb](http://docs.spring.io/spring-data/data-mongo/docs/1.7.1.RELEASE/reference/html/)的官方文档。<br>
+本项目集成了`spring-data-mongodb`，如果你需要使用的话，可以把`org.springframework.data.mongodb.core.MongoTemplate` or `org.springframework.data.mongodb.core.MongoOperations`注入到任何你需要的bean中去。<br>
+请参考[spring-data-mongodb](http://docs.spring.io/spring-data/data-mongo/docs/1.7.1.RELEASE/reference/html/)的官方文档。<br>
 
 #### 怎么发送邮件?
 对`JavaMailSender`进行了一层简单的封装。请参考`playground.tool.MailService` <br>
@@ -85,6 +86,11 @@ Q &amp; A
 #### 我可以使用其他JVM语言编程吗?
 本项目集成了`groovy`，实际上确实本项目中确实有一个类是用`groovy语言编写的`: `playground.controller.GroovyController` <br>
 其他语言诸如`scala` `jruby`等暂时不支持。
+
+#### 我想使用https协议,我应该怎么做?
+启动本项目时使用参数`--spring.profiles.active=dev,ssl`即可。<br>
+启动后访问`https://127.0.0.1:8443`可看到效果。<br>
+当然，证书是我自行签名的，在实际的生产环境应该去购买证书。
 
 
 许可证
