@@ -1,6 +1,6 @@
 [![JDK](http://img.shields.io/badge/jdk-v8.0-yellow.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 [![build](http://img.shields.io/badge/build-maven_2-green.svg)](https://maven.apache.org/)
-[![build](http://img.shields.io/badge/build-passing-blue.svg)](https://travis-ci.org/yingzhuo/spring-auto)
+[![build](http://img.shields.io/badge/build-passing-blue.svg)](https://travis-ci.org/yingzhuo/spring-playground)
 [![license](http://img.shields.io/badge/license-apache_2-red.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
 # spring-playgroud
