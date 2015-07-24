@@ -8,13 +8,13 @@
 
 你可以通过以下方式的任意一种启动这个项目
 
-```bash
+```
 git clone git@github.com:yingzhuo/spring-playground.git
 cd spring-playground
 mvn clean spring-boot:run
 ```
 
-```bash
+```
 git clone git@github.com:yingzhuo/spring-playground.git
 cd spring-playground
 mvn clean package
@@ -75,6 +75,9 @@ Q &amp; A
 
 #### 我需要任务调度怎么办？
 请参考`playground.scheduler.HeartbeatSecheduler`
+
+#### 我想使用本地缓存，我应该怎么做?
+请参考`playground.ApplicationConfigCaching`和`playground.service.impl.UserServiceImpl`
 
 #### Spring AOP有参考例子吗?
 请参考`playground.aop.ServiceLoggingAdvice`
