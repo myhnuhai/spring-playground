@@ -38,14 +38,17 @@ public class Application {
     @PostConstruct
     public void init() {
         List<String> profiles = Arrays.asList(env.getActiveProfiles());
-        LOGGER.info("========================================");
+        LOGGER.info("===========================================================================");
+        LOGGER.info("THIS LOG IS VERY IMPORTANT !!!");
+        LOGGER.info("UNEXPECTED BAD THINGS WILL HAPPEN IF YOU ARE USING WRONG PROFILES.");
+        LOGGER.info("---------------------------------------------------------------------------");
         if (profiles.isEmpty()) {
-            LOGGER.info("no active profiles!");
+            LOGGER.warn("NO ACTIVE PROFILES !");
         } else {
-            LOGGER.info("active profiles: ");
+            LOGGER.info("ACTIVE PROFILES: ");
             profiles.forEach(LOGGER::debug);
         }
-        LOGGER.info("========================================");
+        LOGGER.info("===========================================================================");
     }
 
 }

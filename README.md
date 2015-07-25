@@ -18,8 +18,11 @@ mvn clean spring-boot:run
 git clone git@github.com:yingzhuo/spring-playground.git
 cd spring-playground
 mvn clean package
-java -jar target/spring-boot-1.0.0.jar --spring.profiles.active=dev
+java -jar target/spring-boot-1.0.0.jar --spring.profiles.active=dev --debug
 ```
+
+上面的`--debug`参数使项目启动时会详细地输出日志。
+
 
 或者，你可以可以直接下载[源代码](https://github.com/yingzhuo/spring-playground/archive/master.zip)，之后导入到你喜爱的IDE中。
 * eclipse: `mvn eclipse:eclipse`
