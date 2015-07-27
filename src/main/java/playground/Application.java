@@ -39,14 +39,14 @@ public class Application {
     public void init() {
         List<String> profiles = Arrays.asList(env.getActiveProfiles());
         LOGGER.info("===========================================================================");
-        LOGGER.info("THIS LOG IS VERY IMPORTANT !!!");
-        LOGGER.info("UNEXPECTED BAD THINGS WILL HAPPEN IF YOU ARE USING WRONG PROFILES.");
+        LOGGER.info("This log is very important !!!");
+        LOGGER.info("Unexpected bad things will happen if you are using wrong profiles.");
         LOGGER.info("---------------------------------------------------------------------------");
         if (profiles.isEmpty()) {
-            LOGGER.warn("NO ACTIVE PROFILES !");
+            LOGGER.warn("No active profiles !");
         } else {
-            LOGGER.info("ACTIVE PROFILES: ");
-            profiles.forEach(LOGGER::debug);
+            LOGGER.info("Active profiles: ");
+            profiles.forEach(LOGGER::info);
         }
         LOGGER.info("===========================================================================");
     }
