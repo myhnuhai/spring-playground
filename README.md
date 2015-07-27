@@ -86,12 +86,16 @@ Q &amp; A
 请参考`playground.aop.ServiceLoggingAdvice`
 
 #### ~~可以集成认证与授权框架吗?~~
+~~已过时~~ <br>
 ~~本项目集成了`apache-shiro`，请参考`playground.ApplicationConfigShiro`~~ <br>
 ~~推荐使用标注管理访问URL。~~
 
 #### 我可以使用其他JVM语言编程吗?
 本项目集成了`groovy`，事实上本项目中确实有一个类是用`groovy`语言编写的: `playground.controller.GroovyController` <br>
 其他语言诸如`scala` `jruby`等暂时不支持。
+
+#### 可以用webjars导入`css` `javascript`吗?
+可以! 参考`playground.ApplicationConfigMvc`和`classpath:/templates/users.html`。
 
 #### 我想使用https协议,我应该怎么做?
 启动本项目时使用参数`--spring.profiles.active=dev,ssl`即可。<br>
