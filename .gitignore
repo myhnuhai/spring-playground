@@ -7,11 +7,16 @@ build/
 *.log
 *.tmp
 *.bak
+~*
 
 # idea
 .idea/
 *.eml
 *.iml
+*.ipr
+*.iws
+
+# eclipse
 .classpath
 .project
 
