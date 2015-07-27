@@ -9,11 +9,11 @@ import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import playground.shiro.JdbcRealm;
 
-@Configuration
+//@Configuration
+@Deprecated // 不再使用apache-shiro
 public class ApplicationConfigShiro {
 
     @Bean

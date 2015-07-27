@@ -61,7 +61,7 @@ Q &amp; A
 这里配置了两种数据源，一种是嵌入式数据库HSQLDB，一种使用的是`alibaba-druid`。
 
 #### 这个项目使用了ORM框架吗？
-本项目使用的是mybatis。<br>
+本项目使用的是`mybatis`。<br>
 请参考`playground.ApplicationConfigMyBatis`和`playground.service.impl.UserServiceImpl` <br>
 其他ORM框架如 hibernate, spring-data-jpa等本项目没有支持，如果需要请自行添加。
 
@@ -85,9 +85,9 @@ Q &amp; A
 #### Spring AOP有参考例子吗?
 请参考`playground.aop.ServiceLoggingAdvice`
 
-#### 可以集成认证与授权框架吗?
-本项目集成了`apache-shiro`，请参考`playground.ApplicationConfigShiro` <br>
-推荐使用标注管理访问URL。
+#### ~~可以集成认证与授权框架吗?~~
+~~本项目集成了`apache-shiro`，请参考`playground.ApplicationConfigShiro`~~ <br>
+~~推荐使用标注管理访问URL。~~
 
 #### 我可以使用其他JVM语言编程吗?
 本项目集成了`groovy`，事实上本项目中确实有一个类是用`groovy`语言编写的: `playground.controller.GroovyController` <br>
