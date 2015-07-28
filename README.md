@@ -95,7 +95,8 @@ Q &amp; A
 其他语言诸如`scala` `jruby`等暂时不支持。
 
 #### 可以用webjars导入`css` `javascript`吗?
-可以! 参考`playground.ApplicationConfigMvc`和`classpath:/templates/users.html`。
+可以! 参考`playground.ApplicationConfigMvc`和`classpath:/templates/users.html`。<br>
+这个页面使用了`bootstrap 3.0`
 
 #### 我想使用https协议,我应该怎么做?
 启动本项目时使用参数`--spring.profiles.active=dev,ssl`即可。<br>
