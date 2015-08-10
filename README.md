@@ -56,6 +56,9 @@ Q &amp; A
 #### 有下载文件的代码例子吗?
 请参考`playground.controller.DownloadController`
 
+#### 有集成`hibernate-validator`的例子吗?
+请参考`playground.controller.ValidatingController`
+
 #### 如何配置数据源?
 请参考`playground.ApplicationConfigDataSource`。<br>
 这里配置了两种数据源，一种是嵌入式数据库HSQLDB，一种使用的是`alibaba-druid`。
