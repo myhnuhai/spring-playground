@@ -12,7 +12,7 @@
 
     <properties>
         <encoding>UTF-8</encoding>
-        <start-class>playground.Application</start-class>
+        <start.class>playground.Application</start.class>
         <spring.boot.version>1.2.5.RELEASE</spring.boot.version>
         <spring.version>4.2.0.RELEASE</spring.version>
         <spring.security.version>4.0.2.RELEASE</spring.security.version>
@@ -371,6 +371,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>1.2.5.RELEASE</version>
+                <configuration>
+                    <mainClass>${start.class}</mainClass>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
