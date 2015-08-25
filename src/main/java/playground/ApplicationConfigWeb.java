@@ -10,12 +10,8 @@ import playground.web.filter.LoggingFilter;
 public class ApplicationConfigWeb {
 
     @Bean
-    public FilterRegistrationBean loggingFilter() {
-        FilterRegistrationBean bean = new FilterRegistrationBean();
-        bean.setFilter(new LoggingFilter());
-        bean.setName(LoggingFilter.class.getSimpleName());
-        bean.addUrlPatterns("/*");
-        return bean;
+    public LoggingFilter loggingFilter() {
+        return new LoggingFilter();
     }
 
     @Bean
