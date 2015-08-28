@@ -39,7 +39,10 @@ public class ApplicationConfigSecurity extends WebSecurityConfigurerAdapter {
                     .antMatchers("/", "/info", "/security/logout", "**/*.js", "**/*.css", "**/*.ico").permitAll()
                     .anyRequest().authenticated()
                     .and()
-                .httpBasic();
+                .httpBasic()
+                    .and()
+                .csrf()
+                    .disable();
 
         http.userDetailsService(userDetailsService());
     }
