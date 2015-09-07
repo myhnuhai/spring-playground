@@ -22,6 +22,11 @@ public class TestCasesExample {
 
     }
 
+    @AfterClass
+    public static void afterClass() {
+
+    }
+
     @Before
     public void before() {
 
@@ -35,11 +40,6 @@ public class TestCasesExample {
 
     @After
     public void after() {
-
-    }
-
-    @AfterClass
-    public static void afterClass() {
 
     }
 }

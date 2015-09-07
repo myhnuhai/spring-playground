@@ -16,6 +16,7 @@
         <spring.boot.version>1.2.5.RELEASE</spring.boot.version>
         <spring.version>4.2.1.RELEASE</spring.version>
         <spring.security.version>4.0.2.RELEASE</spring.security.version>
+        <spring.retry.version>1.1.2.RELEASE</spring.retry.version>
         <slf4j.version>1.7.12</slf4j.version>
         <logback.version>1.1.3</logback.version>
         <jackson.version>2.6.0</jackson.version>
@@ -168,6 +169,7 @@
         </dependency>
 
         <!-- spring-security -->
+        <!--
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
@@ -182,6 +184,14 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
             <version>${spring.security.version}</version>
+        </dependency>
+        -->
+
+        <!-- spring-retry -->
+        <dependency>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
+            <version>${spring.retry.version}</version>
         </dependency>
 
         <!-- ehcache -->
