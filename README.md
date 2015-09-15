@@ -88,7 +88,7 @@ Q &amp; A
 #### Spring AOP有参考例子吗?
 请参考`playground.aop.ServiceLoggingAdvice`
 
-#### ~~可以集成认证与授权框架吗?~~
+#### 可以集成认证与授权框架吗?
 本项目集成了`apache-shiro`，请参考`playground.ApplicationConfigShiro` <br>
 推荐使用标注管理访问URL
 
@@ -136,4 +136,3 @@ limitations under the License.
 ![QQ](http://img.shields.io/badge/QQ-23007067-blue.svg)
 ![WeChat](http://img.shields.io/badge/WeChat-yingzhor-blue.svg)
 ![Email](http://img.shields.io/badge/Email-yingzhor@gmail.com-blue.svg)
-![Phone](http://img.shields.io/badge/Phone-+86_189_1694_4373-blue.svg)
