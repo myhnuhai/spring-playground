@@ -25,15 +25,15 @@ import java.util.List;
 @EnableAspectJAutoProxy
 @EnableConfigurationProperties
 @EnableTransactionManagement
-public class Application {
+public class ApplicationBoot {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationBoot.class);
 
     @Resource
     private Environment env;
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(ApplicationBoot.class, args);
     }
 
     @EventListener(classes = ContextRefreshedEvent.class)

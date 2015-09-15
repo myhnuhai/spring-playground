@@ -89,9 +89,8 @@ Q &amp; A
 请参考`playground.aop.ServiceLoggingAdvice`
 
 #### ~~可以集成认证与授权框架吗?~~
-~~已过时~~ <br>
-~~本项目集成了`apache-shiro`，请参考`playground.ApplicationConfigShiro`~~ <br>
-~~推荐使用标注管理访问URL。~~
+本项目集成了`apache-shiro`，请参考`playground.ApplicationConfigShiro` <br>
+推荐使用标注管理访问URL
 
 #### 我可以使用其他JVM语言编程吗?
 本项目集成了`groovy`，事实上本项目中确实有一个类是用`groovy`语言编写的: `playground.controller.GroovyController` <br>
