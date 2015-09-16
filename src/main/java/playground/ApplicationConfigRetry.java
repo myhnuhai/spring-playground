@@ -11,6 +11,10 @@ import org.springframework.retry.support.RetryTemplate;
 @Configuration
 public class ApplicationConfigRetry {
 
+    public ApplicationConfigRetry() {
+        ApplicationBoot.LOGGER.debug("{} creating ...", ApplicationConfigRetry.class.getSimpleName());
+    }
+
     @Bean
     public RetryTemplate retryTemplate() {
         RetryTemplate retryTemplate = new RetryTemplate();

@@ -14,9 +14,12 @@ import org.springframework.core.io.ClassPathResource;
 import java.util.LinkedList;
 import java.util.List;
 
-
 @Configuration
 public class ApplicationConfigCaching extends CachingConfigurerSupport {
+
+    public ApplicationConfigCaching() {
+        ApplicationBoot.LOGGER.debug("{} creating ...", ApplicationConfigCaching.class.getSimpleName());
+    }
 
     @Override
     public CacheManager cacheManager() {
@@ -36,8 +39,6 @@ public class ApplicationConfigCaching extends CachingConfigurerSupport {
     public KeyGenerator keyGenerator() {
         return new SimpleKeyGenerator();
     }
-
-    /* ------------------------------------------------------------------------------ */
 
     @Bean
     public EhCacheCacheManager ehCacheCacheManager() {

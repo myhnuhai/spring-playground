@@ -17,6 +17,9 @@ import playground.security.WorkhourseRealm;
 @Configuration
 public class ApplicationConfigShiro {
 
+    public ApplicationConfigShiro() {
+        ApplicationBoot.LOGGER.debug("{} creating ...", ApplicationConfigShiro.class.getSimpleName());
+    }
 
     @Bean
     public ShiroFilterFactoryBean shiroFilter() {

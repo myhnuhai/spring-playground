@@ -18,6 +18,10 @@ public class ApplicationConfigDataSource {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationBoot.class);
 
+    public ApplicationConfigDataSource() {
+        ApplicationBoot.LOGGER.debug("{} creating ...", ApplicationConfigDataSource.class.getSimpleName());
+    }
+
     @Profile("dev")
     @Bean(name = "dataSource")
     public DataSource devDataSource() {

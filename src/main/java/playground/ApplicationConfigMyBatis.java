@@ -16,6 +16,10 @@ import javax.sql.DataSource;
 @Configuration
 public class ApplicationConfigMyBatis {
 
+    public ApplicationConfigMyBatis() {
+        ApplicationBoot.LOGGER.debug("{} creating ...", ApplicationConfigMyBatis.class.getSimpleName());
+    }
+
     @Resource
     private DataSource dataSource;
 

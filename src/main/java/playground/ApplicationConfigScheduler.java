@@ -11,6 +11,10 @@ import java.util.concurrent.Executors;
 @Configuration
 public class ApplicationConfigScheduler implements SchedulingConfigurer {
 
+    public ApplicationConfigScheduler() {
+        ApplicationBoot.LOGGER.debug("{} creating ...", ApplicationConfigScheduler.class.getSimpleName());
+    }
+
     @Override
     public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
         taskRegistrar.setScheduler(taskScheduler());

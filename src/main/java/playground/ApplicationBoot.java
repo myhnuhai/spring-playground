@@ -27,7 +27,7 @@ import java.util.List;
 @EnableTransactionManagement
 public class ApplicationBoot {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationBoot.class);
+    public static final Logger LOGGER = LoggerFactory.getLogger("playground.boot");
 
     @Resource
     private Environment env;

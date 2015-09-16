@@ -1,17 +1,24 @@
 package playground;
 
+import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.filter.RequestContextFilter;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.util.UrlPathHelper;
 import playground.web.argumenthandler.IPHandlerMethodArgumentResolver;
+import playground.web.filter.LoggingFilter;
 
 import java.util.List;
 
 @Configuration
 public class ApplicationConfigMvc extends WebMvcConfigurerAdapter {
+
+    public ApplicationConfigMvc() {
+        ApplicationBoot.LOGGER.debug("{} creating ...", ApplicationConfigMvc.class.getSimpleName());
+    }
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
@@ -59,5 +66,19 @@ public class ApplicationConfigMvc extends WebMvcConfigurerAdapter {
         if (!registry.hasMappingForPattern("/webjars/**")) {
             registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
         }
+    }
+
+    @Bean
+    public LoggingFilter loggingFilter() {
+        return new LoggingFilter();
+    }
+
+    @Bean
+    public FilterRegistrationBean requestContextFilter() {
+        FilterRegistrationBean bean = new FilterRegistrationBean();
+        bean.setFilter(new RequestContextFilter());
+        bean.setName(RequestContextFilter.class.getSimpleName());
+        bean.addUrlPatterns("/*");
+        return bean;
     }
 }
