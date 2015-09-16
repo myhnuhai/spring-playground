@@ -17,10 +17,6 @@ import playground.security.WorkhourseRealm;
 @Configuration
 public class ApplicationConfigShiro {
 
-    @Bean
-    public LifecycleBeanPostProcessor lifecycleBeanPostProcessor() {
-        return new LifecycleBeanPostProcessor();
-    }
 
     @Bean
     public ShiroFilterFactoryBean shiroFilter() {
@@ -66,8 +62,13 @@ public class ApplicationConfigShiro {
     }
 
     @Bean
+    public static LifecycleBeanPostProcessor lifecycleBeanPostProcessor() {
+        return new LifecycleBeanPostProcessor();
+    }
+
+    @Bean
     @DependsOn("lifecycleBeanPostProcessor")
-    public DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator() {
+    public static DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator() {
         DefaultAdvisorAutoProxyCreator proxyCreator = new DefaultAdvisorAutoProxyCreator();
         proxyCreator.setProxyTargetClass(true);
         return proxyCreator;
