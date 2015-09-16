@@ -34,6 +34,22 @@ public class ShiroUtils {
         return SecurityUtils.getSecurityManager();
     }
 
+    public static <T> T getPrincipal(Class<T> type) {
+        Subject subject = getSubject();
+        if (subject == null) {
+            return null;
+        }
+
+        Object principal = subject.getPrincipal();
+
+        try {
+            return (T) principal;
+        } catch (ClassCastException e) {
+            LOGGER.error("type error: {}", principal.getClass().getName());
+            throw e;
+        }
+    }
+
     public static boolean login(AuthenticationToken token) {
         if (token == null) {
             return false;
