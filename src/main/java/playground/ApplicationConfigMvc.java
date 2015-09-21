@@ -1,8 +1,12 @@
 package playground;
 
+import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
+import org.springframework.boot.context.embedded.ErrorPage;
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
+import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.filter.RequestContextFilter;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.*;
@@ -80,5 +84,12 @@ public class ApplicationConfigMvc extends WebMvcConfigurerAdapter {
         bean.setName(RequestContextFilter.class.getSimpleName());
         bean.addUrlPatterns("/*");
         return bean;
+    }
+
+    @Bean
+    public EmbeddedServletContainerFactory servletContainer() {
+        TomcatEmbeddedServletContainerFactory factory = new TomcatEmbeddedServletContainerFactory();
+        factory.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND, "/404.html"));
+        return factory;
     }
 }

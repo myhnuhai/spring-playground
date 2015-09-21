@@ -13,7 +13,7 @@
     <properties>
         <encoding>UTF-8</encoding>
         <start.class>playground.ApplicationBoot</start.class>
-        <spring.boot.version>1.2.5.RELEASE</spring.boot.version>
+        <spring.boot.version>1.2.6.RELEASE</spring.boot.version>
         <spring.version>4.2.1.RELEASE</spring.version>
         <spring.retry.version>1.1.2.RELEASE</spring.retry.version>
         <slf4j.version>1.7.12</slf4j.version>
@@ -383,7 +383,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>1.2.5.RELEASE</version>
+                <version>${spring.boot.version}</version>
                 <configuration>
                     <mainClass>${start.class}</mainClass>
                 </configuration>
