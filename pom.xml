@@ -316,6 +316,13 @@
             <version>18.0</version>
         </dependency>
 
+        <!-- snakeyaml -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.16</version>
+        </dependency>
+
         <!-- commons -->
         <dependency>
             <groupId>org.apache.commons</groupId>
